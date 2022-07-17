@@ -584,3 +584,291 @@ Consider defining a bean of type 'com.song.bilibili.service.DemoService' in your
 2022-07-18 02:16:32.339 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=5m12s311ms).
 2022-07-18 02:22:14.208 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=5m11s857ms).
 2022-07-18 02:27:56.036 WARN  com.zaxxer.hikari.pool.HikariPool                 :788  [32m                  [0;39m HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=5m11s820ms).
+2022-07-18 03:26:57.592 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-4 - Shutdown initiated...
+2022-07-18 03:26:57.607 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-4 - Shutdown completed.
+2022-07-18 03:26:58.330 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 03:26:58.331 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 03:26:58.740 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner  :44   [32m                  [0;39m No MyBatis mapper was found in '[com.song]' package. Please check your configuration.
+2022-07-18 03:26:58.827 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 03:26:58.829 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:26:58.829 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 03:26:58.829 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 03:26:58.858 INFO  o.a.c.c.ContainerBase.[Tomcat-3].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 03:26:58.859 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 520 ms
+2022-07-18 03:26:58.876 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoApi': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoService' defined in file [/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-service/target/classes/com/song/bilibili/service/DemoService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.song.bilibili.service.DemoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@268749a5]
+2022-07-18 03:26:58.877 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-07-18 03:26:58.888 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-18 03:26:58.897 ERROR org.springframework.boot.SpringApplication        :843  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoApi': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoService' defined in file [/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-service/target/classes/com/song/bilibili/service/DemoService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.song.bilibili.service.DemoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@268749a5]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.song.SongApplication.main(SongApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoService' defined in file [/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-service/target/classes/com/song/bilibili/service/DemoService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.song.bilibili.service.DemoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@268749a5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:461)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 22 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.song.bilibili.service.DemoService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@268749a5]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:739)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:671)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:366)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:347)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1098)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 34 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/song/bilibili/dao/DemoDao;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:734)
+	... 40 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.song.bilibili.dao.DemoDao
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 44 common frames omitted
+2022-07-18 03:27:01.615 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 03:27:01.615 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 03:27:02.215 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 03:27:02.219 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:27:02.219 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 03:27:02.220 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 03:27:02.232 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 03:27:02.233 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 613 ms
+2022-07-18 03:27:02.491 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-5 - Starting...
+2022-07-18 03:27:02.503 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-5 - Start completed.
+2022-07-18 03:27:02.534 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 03:27:02.549 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:27:02.552 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 03:27:02.558 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 1.015 seconds (JVM running for 5477.958)
+2022-07-18 03:27:02.561 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 03:27:02.561 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 03:27:02.562 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 03:37:40.724 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-5 - Shutdown initiated...
+2022-07-18 03:37:40.747 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-5 - Shutdown completed.
+2022-07-18 03:37:43.827 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 03:37:43.835 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 03:37:45.300 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 03:37:45.303 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:37:45.303 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 03:37:45.306 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 03:37:45.343 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 03:37:45.349 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1488 ms
+2022-07-18 03:37:45.806 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-6 - Starting...
+2022-07-18 03:37:45.817 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-6 - Start completed.
+2022-07-18 03:37:45.868 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 03:37:45.896 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:37:45.904 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 03:37:45.915 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 2.596 seconds (JVM running for 6121.334)
+2022-07-18 03:37:45.921 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 03:37:45.922 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 03:37:45.924 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 03:39:00.602 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-6 - Shutdown initiated...
+2022-07-18 03:39:00.629 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-6 - Shutdown completed.
+2022-07-18 03:39:01.515 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 03:39:01.515 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 03:39:05.499 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 03:39:05.504 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:39:05.506 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 03:39:05.507 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 03:39:05.534 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 03:39:05.535 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 4014 ms
+2022-07-18 03:39:07.038 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-7 - Starting...
+2022-07-18 03:39:07.053 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-7 - Start completed.
+2022-07-18 03:39:07.097 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 03:39:07.128 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:39:07.808 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 03:39:07.828 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 6.444 seconds (JVM running for 6203.244)
+2022-07-18 03:39:07.833 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 03:39:07.834 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 03:39:07.835 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 03:39:09.598 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-7 - Shutdown initiated...
+2022-07-18 03:39:09.613 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-7 - Shutdown completed.
+2022-07-18 03:39:10.140 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 03:39:10.147 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 03:39:10.863 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 03:39:10.866 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:39:10.867 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 03:39:10.867 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 03:39:10.886 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 03:39:10.886 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 732 ms
+2022-07-18 03:39:11.693 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-8 - Starting...
+2022-07-18 03:39:11.762 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-8 - Start completed.
+2022-07-18 03:39:12.189 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 03:39:12.250 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 03:39:12.266 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 03:39:12.284 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 2.162 seconds (JVM running for 6207.63)
+2022-07-18 03:39:12.289 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 03:39:12.290 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 03:39:12.291 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 04:00:48.491 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-8 - Shutdown initiated...
+2022-07-18 04:00:48.501 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-8 - Shutdown completed.
+2022-07-18 04:00:49.074 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 04:00:49.075 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 04:00:50.003 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 04:00:50.007 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:00:50.009 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 04:00:50.010 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 04:00:50.038 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 04:00:50.039 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 958 ms
+2022-07-18 04:00:50.298 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-9 - Starting...
+2022-07-18 04:00:50.308 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-9 - Start completed.
+2022-07-18 04:00:50.326 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 04:00:50.337 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:00:50.340 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 04:00:50.345 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 1.547 seconds (JVM running for 7505.731)
+2022-07-18 04:00:50.347 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 04:00:50.348 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 04:00:50.348 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 04:01:04.892 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-9 - Shutdown initiated...
+2022-07-18 04:01:04.895 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-9 - Shutdown completed.
+2022-07-18 04:01:05.096 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 04:01:05.097 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 04:01:05.461 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 04:01:05.462 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:05.463 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 04:01:05.463 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 04:01:05.488 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 04:01:05.494 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 393 ms
+2022-07-18 04:01:05.944 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-10 - Starting...
+2022-07-18 04:01:05.958 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-10 - Start completed.
+2022-07-18 04:01:05.979 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 04:01:06.156 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:06.177 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 04:01:06.201 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 1.152 seconds (JVM running for 7521.586)
+2022-07-18 04:01:06.206 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 04:01:06.207 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 04:01:06.207 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 04:01:07.422 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-10 - Shutdown initiated...
+2022-07-18 04:01:07.446 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-10 - Shutdown completed.
+2022-07-18 04:01:07.737 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 04:01:07.738 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 04:01:08.301 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 04:01:08.303 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:08.304 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 04:01:08.304 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 04:01:08.317 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 04:01:08.317 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 565 ms
+2022-07-18 04:01:08.549 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-11 - Starting...
+2022-07-18 04:01:08.559 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-11 - Start completed.
+2022-07-18 04:01:08.581 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 04:01:08.605 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:08.609 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 04:01:08.620 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 0.97 seconds (JVM running for 7524.005)
+2022-07-18 04:01:08.623 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 04:01:08.625 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 04:01:08.626 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 04:01:44.336 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-11 - Shutdown initiated...
+2022-07-18 04:01:44.349 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-11 - Shutdown completed.
+2022-07-18 04:01:44.729 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 04:01:44.730 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 04:01:46.726 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 04:01:46.727 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:46.729 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 04:01:46.729 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 04:01:46.780 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 04:01:46.781 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 2046 ms
+2022-07-18 04:01:46.998 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-12 - Starting...
+2022-07-18 04:01:47.005 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-12 - Start completed.
+2022-07-18 04:01:47.426 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 04:01:47.455 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:47.474 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 04:01:47.494 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 2.841 seconds (JVM running for 7562.879)
+2022-07-18 04:01:47.507 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 04:01:47.509 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 04:01:47.513 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 04:01:49.922 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-12 - Shutdown initiated...
+2022-07-18 04:01:49.930 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-12 - Shutdown completed.
+2022-07-18 04:01:50.282 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 04:01:50.282 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 04:01:51.119 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 04:01:51.120 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:51.121 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 04:01:51.122 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 04:01:51.140 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 04:01:51.141 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 855 ms
+2022-07-18 04:01:51.353 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-13 - Starting...
+2022-07-18 04:01:51.357 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-13 - Start completed.
+2022-07-18 04:01:51.403 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 04:01:51.426 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:01:51.429 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 04:01:51.444 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 1.238 seconds (JVM running for 7566.828)
+2022-07-18 04:01:51.450 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 04:01:51.455 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 04:01:51.458 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 04:02:01.064 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-13 - Shutdown initiated...
+2022-07-18 04:02:01.087 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-13 - Shutdown completed.
+2022-07-18 04:02:01.461 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 04:02:01.462 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 04:02:02.538 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 04:02:02.539 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:02:02.541 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 04:02:02.541 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 04:02:02.570 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 04:02:02.573 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1106 ms
+2022-07-18 04:02:03.024 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-14 - Starting...
+2022-07-18 04:02:03.055 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-14 - Start completed.
+2022-07-18 04:02:03.114 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 04:02:03.134 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:02:03.136 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 04:02:03.143 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 1.791 seconds (JVM running for 7578.527)
+2022-07-18 04:02:03.147 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 04:02:03.151 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 04:02:03.152 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
+2022-07-18 04:02:04.571 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-14 - Shutdown initiated...
+2022-07-18 04:02:04.576 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-14 - Shutdown completed.
+2022-07-18 04:02:04.859 INFO  com.song.SongApplication                          :55   [32m                  [0;39m Starting SongApplication using Java 1.8.0_321 on yiyideMacBook-Air.local with PID 1162 (/Users/yiyi/IdeaProjects/bilibili/song-bilibili/song-bilibili-api/target/classes started by yiyi in /Users/yiyi/IdeaProjects/bilibili/song-bilibili)
+2022-07-18 04:02:04.859 INFO  com.song.SongApplication                          :663  [32m                  [0;39m The following profiles are active: test
+2022-07-18 04:02:05.477 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8081 (http)
+2022-07-18 04:02:05.481 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:02:05.481 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-07-18 04:02:05.482 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-07-18 04:02:05.501 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-07-18 04:02:05.501 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 636 ms
+2022-07-18 04:02:05.741 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-15 - Starting...
+2022-07-18 04:02:05.746 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-15 - Start completed.
+2022-07-18 04:02:05.765 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-07-18 04:02:05.784 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8081"]
+2022-07-18 04:02:05.788 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 04:02:05.796 INFO  com.song.SongApplication                          :61   [32m                  [0;39m Started SongApplication in 0.995 seconds (JVM running for 7581.18)
+2022-07-18 04:02:05.798 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-07-18 04:02:05.799 INFO  com.song.SongApplication                          :20   [32m                  [0;39m 启动成功！！!
+2022-07-18 04:02:05.800 INFO  com.song.SongApplication                          :21   [32m                  [0;39m 地址：	http://127.0.0.1:8081
